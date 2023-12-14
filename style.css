@@ -3,7 +3,7 @@ body {
     font-size: 22px;
     margin: 0;
     padding: 0;
-    background-image: url("pozadie.jpg");
+    background-image: url("../prekvapenie.io/pozadie.jpg");
     background-repeat: no-repeat;
     background-size: cover; /* or 'contain' */
     background-position: center center;
