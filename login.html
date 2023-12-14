@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Secrete Santa</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Mountains of Christmas";
-        font-size: 22px;
-        margin: 0;
-        padding: 0;
-        background-image: url("pozadie.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        height: 100vh; /* Set the height to 100% of the viewport height */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: black;
-      }
-      h3 {
-        padding-bottom: 150px;
-      }
-      form {
-        padding: 20px;
-        width: 100%;
-        max-width: 400px; /* Adjust the max-width as needed */
-        box-sizing: border-box;
-      }
 
-      label {
-        display: block;
-        margin-bottom: 10px;
-        color: black;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Check</title>
+  <link href='https://fonts.googleapis.com/css?family=Mountains+of+Christmas' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Mountains of Christmas';
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
+      background-image: url("pozadie.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+    }
 
-      input {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 20px;
-      }
+    h1 {
+      max-width: 600px;
+    }
 
-      input[type="submit"] {
-        width: 100%;
-      }
-      .text{
-        max-width: 250px;
-      }
-    </style>
-  </head>
+    form {
+      background-color: var(--form-bg);
+      border-radius: 10px;
+      box-shadow: var(--form-shadow);
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
 
-  <body>
-    <div class="text">
-      <h3>
-        Každá rodina sa stretáva počas Štedrého dňa pri stromčeku, lenže je tu
-        ešte jeden u ktorého sa nestretávame.
-      </h3>
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    input {
+      width: calc(100% - 20px);
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById('password').value;
+
+      if (password.toLowerCase() === 'darček') {
+        window.location.href = 'index.html'; // Replace with your desired redirect URL
+      } else {
+        alert('Zle Heslo'); // You can replace this with any other error handling or UI feedback
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Každá rodina sa stretáva počas Štedrého dňa pri stromčeku, lenže je tu ešte jeden u ktorého sa nestretávame</h1>
+  <form onsubmit="event.preventDefault(); checkPassword();">
+    <div>
+      <label for="password">Odpoved:</label>
+      <input type='password' id="password" name="password" autocomplete='new-password' required />
     </div>
-    <form>
-      <div>
-        <label for="password">Odpoved:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          autocomplete="new-password"
-          required
-        />
-      </div>
-      <div>
-        <input type="submit" value="Potvrdiť" />
-      </div>
-    </form>
-  </body>
+    <div>
+      <input type="submit" value="Potvrdiť">
+    </div>
+  </form>
+</body>
+
 </html>
