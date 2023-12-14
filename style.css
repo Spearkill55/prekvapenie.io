@@ -1,35 +1,41 @@
 body {
-    font-family: 'Mountains of Christmas';
-    font-size: 22px;
-    margin: 0;
-    padding-top: 20px;
-    background-image: url("../prekvapenie.io/pozadie.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; /* or 'contain' */
-    background-position: center center;
-  }
+  font-family: 'Mountains of Christmas';
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  background-image: url("pozadie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  div {
-    margin: auto;
-    padding: 0 10px;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to improve readability */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a card-like effect */
-  }
+form {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  box-sizing: border-box;
+}
 
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 
-  input {
-    width: calc(100% - 20px);
-    box-sizing: border-box;
-    padding: 8px;
-    margin-bottom: 15px;
-  }
+input {
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+}
 
-  input[type="submit"] {
-    width: 100%;
-  }
+input[type="submit"] {
+  width: 100%;
+}
